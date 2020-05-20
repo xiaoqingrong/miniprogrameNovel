@@ -1,0 +1,68 @@
+#read{
+  position: relative;
+}
+.container{
+  line-height: 30px;
+  font-size: 15px;
+  word-spacing: 0;
+}
+.mid_charcter{
+  padding: 10px;
+}
+.items{
+  display: flex!important;
+  margin-bottom: 10px;
+  color: #000000;
+  justify-content: space-around;
+  margin-left: 10px;
+}
+#color_change{
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #ccc;
+}
+#color_change .color_content{
+  float: left;
+  width: 94rpx;
+  height: 94rpx;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+#color_change .color_content:nth-child(1){
+  background-color: #d4f0d2;
+}
+#color_change .color_content:nth-child(2){
+  background-color: #fefbed;
+}
+#color_change .color_content:nth-child(3){
+  background-color: #f0e4c9;
+}
+#color_change .color_content:nth-child(4){
+  background-color: #f8f8f8;
+}
+#color_change .color_content:nth-child(5){
+  background-color: #cfdce5;
+}
+#color_change .color_content:nth-child(6){
+  background-color: #000000;
+}
+
+.book_character{
+  position: fixed;
+  left: 0;
+  top: 20px;
+  width: 50%;
+  height: 300px;
+  overflow: scroll;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #cfdce5;
+}
+.book_character view{
+  color: #000000;
+  text-align: left;
+  margin: 10px 0;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #ccc;
+}

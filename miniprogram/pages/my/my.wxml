@@ -1,0 +1,14 @@
+<view id="myBook">
+    <button wx:if="{{avatarUrl==''}}" bindtap="login">登录</button>
+    <image wx:if="{{avatarUrl !=''}}" mode="widthFix" src="{{avatarUrl}}"></image>
+  <view bindtap="gotoMyBook">
+  <image mode="widthFix" src="../../images/book1.png"></image>
+    我的书架
+    <image mode="widthFix" src="../../images/arrow.png"></image>
+  </view>
+  <view bindtap="aboutWe">
+    <image mode="widthFix" src="../../images/my1.png"></image>
+    关于我们
+    <image mode="widthFix" src="../../images/arrow.png"></image>
+  </view>
+</view>

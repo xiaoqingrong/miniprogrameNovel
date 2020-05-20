@@ -1,0 +1,18 @@
+<view>
+  <view  class="inputtext">
+    <input bindinput="getSearchWord" placeholder="书名/作者"></input>
+    <view bindtap="searchWord">搜索</view>
+  </view>
+  <view wx:if="{{searchWordItem.length == 0}}">
+    <view id="search_history">
+      <view>搜索历史</view>
+      <view bindtap="clear_search_history">清空</view>
+    </view>
+    <view id="search_content">
+      <view wx:for="{{searchHistory}}" key="{{index}}">{{item.history_val}}</view>
+    </view>
+  </view>
+  <view bindtap="gotoSearchItem" wx:if="{{searchWordItem.length > 0}}" data-book_id="{{item.id}}" data-book_name="{{item.book_name}}" wx:for="{{searchWordItem}}" class="searchList">
+    {{item.book_name}}
+  </view>
+</view>

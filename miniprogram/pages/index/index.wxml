@@ -1,0 +1,28 @@
+<view class="indexPage">
+  <view class="bookShelfsSearch">
+    <Search/> <view bindtap="manages"><image src="../../images/manage.png"></image></view>
+  </view>
+  <view class="bookShelfsManage" wx:if="{{shelfManage == true}}">
+    <view bindtap="canselBook">书籍管理</view>
+  </view>
+  
+  <view class="bookShelfs">
+    <view class="book" wx:for="{{bookItem}}" wx:key="index">
+     <view>
+       <image bindtap="gotoRead" src="{{item.bookimg}}" data-bookid = "{{item.bookid}}"></image>
+       <checkbox-group bindchange="checkboxChange" data-bookid = "{{item.bookid}}">
+       <checkbox wx:if="{{checked==true}}" checked="{{isChecked == true ? true :false}}"></checkbox>
+       </checkbox-group>
+     </view>
+    </view>
+    <view class="addBook" bindtap="addBook">
+      <image mode="widthFix" src="../../images/addbook.png"></image>
+    </view>
+  </view>
+</view>
+<view class="chooseCansel" wx:if="{{checked==true}}">
+    <view class="cansel" bindtap="canselNovel">删除</view>
+    <view class="allCheck" wx:if="{{isChecked==false}}" bindtap="allCheckFn">全选</view>
+    <view class="allCheck" wx:if="{{isChecked==true}}" bindtap="allCheckFnNo">取消全选</view>
+     <view class="cansel" bindtap="Not">取消</view>
+  </view>

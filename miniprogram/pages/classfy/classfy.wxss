@@ -1,0 +1,42 @@
+/* miniprogram/pages/classfy/classfy.wxss */
+#bookType{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 160rpx;
+}
+#bookType view{
+  flex: 1;
+  margin:0 10px;
+  text-align: center;
+  padding-bottom: 2px;
+  font-size: 30rpx;
+}
+
+
+#lables,#lables_girl,#lables_publish{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+#lables view,#lables_girl view,#lables_publish view{
+  width: 40%;
+  margin: 10px 0;
+  padding: 20px 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 30rpx;
+  background-color: aliceblue;
+}
+#lables view image,#lables_girl view image,#lables_publish view image{
+  width: 80%;
+  margin-top: 10rpx;
+}
+.wordActive{
+  color: red;
+  border-bottom: 6rpx solid red;
+}
+.notWordActive{
+  color: #000;
+  border-bottom: none;
+}

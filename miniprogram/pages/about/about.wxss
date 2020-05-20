@@ -1,0 +1,16 @@
+/* miniprogram/pages/about/about.wxss */
+.about{
+  padding: 0 20px;
+}
+.about_title{
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 40rpx;
+}
+.will{
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  background-color: pink;
+  font-size: 30rpx;
+}

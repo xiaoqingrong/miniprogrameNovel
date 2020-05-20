@@ -1,0 +1,29 @@
+<view>
+	<block>
+		<!-- <include src="../../components/seach.wxml" /> -->
+    <Search/>
+	</block>
+
+  <view id="bookType">
+    <view bindtap="boy" class="{{isBoy==1?'wordActive':'notWordActive'}}">男生</view>
+    <view bindtap="girl" class="{{isBoy==2?'wordActive':'notWordActive'}}">女生</view>
+    <view bindtap="published" class="{{isBoy==3?'wordActive':'notWordActive'}}">出版</view>
+  </view>
+
+  <view id="lables" wx:if="{{isBoy == 1}}">
+    <view wx:for="{{lableItem}}" wx:key="index" bindtap="goList" data-boyId="{{item.id}}"> 
+      {{item.label_name}}
+      <image  mode="widthFix"  src="{{item.label_img}}"></image>
+      </view>
+  </view>
+  <view id="lables_girl" wx:elif="{{isBoy == 2}}">
+    <view wx:for="{{lableGirlItem}}" wx:key="index" bindtap="goGirlList" data-girlid="{{item.id}}"> {{item.label_name}} 
+    <image  mode="widthFix"  src="{{item.label_img}}"></image>
+    </view>
+  </view>
+  <view id="lables_publish" wx:elif="{{isBoy == 3}}">
+    <view wx:for="{{publishData}}" wx:key="index" bindtap="goPublishList" data-publishid="{{item.id}}"> {{item.label_name}}  
+    <image  mode="widthFix"  src="{{item.label_img}}"></image>
+    </view>
+  </view>
+</view>

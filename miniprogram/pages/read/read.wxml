@@ -1,0 +1,21 @@
+<view id="read" bindtap="multipleTap" style="background-color:{{backgroundColor}};color:{{color}}">
+  <!-- <view id="head">
+    hello
+  </view> -->
+  <view class="container">
+    <view class="mid_charcter">
+      {{wordData}}
+    </view>
+  </view>
+  <view id="color_change" wx:if="{{color_show == true}}" style="top: {{ positionTop+'px'}}">
+    <view class="items">
+      <view bindtap="showChapter">目录</view><view>上一章</view><view>下一章</view>
+    </view>
+    <view class="color_content" wx:for="{{background}}" bindtap="colorChange" data-color="{{item}}"></view>
+  </view>
+  
+  <view class="book_character" wx:if="{{chapterIsshow ==true }}">
+    <view wx:for="{{directory}}" data-chapterid="{{item.chapter_book_id}}" bindtap="chooseChapter">第{{index+1}}章:{{item.chapter_name}}</view>
+  </view>
+</view>
+  

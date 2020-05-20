@@ -1,0 +1,8 @@
+<view class="about">
+  <view class="about_title">这就是我:</view>
+  <view class="will">善良</view>
+  <view class="will">可爱</view>
+  <view class="will">聪明</view>
+  <view class="will">大方</view>
+  <view class="will">喜欢读书</view>
+</view>

@@ -1,0 +1,50 @@
+.classfyListContent{
+  display: flex;
+  height: 130px;
+  padding: 0 10px;
+  margin: 20px 0;
+  box-shadow: 0 3px 2px 3px #ddd;
+}
+.classfyList_image{
+  width: 30%;
+  height: 100%;
+  line-height: 130px;
+  text-align: center;
+}
+.classfyList_image image{
+  width: 100%;
+}
+.classfyList_text{
+  width: 60%;
+  height: 100%;
+  padding: 20rpx;
+  font-size: 40rpx;
+  overflow: hidden;
+  text-align: center;
+}
+.classfyList_text_con{
+  font-size: 30rpx;
+  display: -webkit-box;
+  line-height: 20px;
+  margin-top: 10px;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+}
+.book_list_text_title{
+  overflow: hidden;
+}
+.book_list_text_title view:nth-child(1){
+  float: left;
+  width: 220rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.book_list_text_title view:nth-child(2){
+  float: right;
+  padding: 2px 6px;
+  font-size: 30rpx;
+  border: 1px solid #ccc;
+  border-radius: 14px;  
+}

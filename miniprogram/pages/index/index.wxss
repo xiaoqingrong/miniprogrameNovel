@@ -1,0 +1,81 @@
+/**index.wxss**/
+.indexPage{
+  position: relative;
+}
+.bookShelfsSearch{
+  display: flex;
+}
+.bookShelfsSearch search{
+  flex: 10;
+}
+.bookShelfsSearch view:nth-child(2){
+  flex: 1;
+}
+.bookShelfsSearch image{
+  margin-top: 8px;
+  width: 40px;
+  height: 36px;
+}
+.bookShelfsManage{
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 20px 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  z-index: 10;
+}
+.chooseCansel{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  bottom: 0;
+  justify-content: space-between;
+  background-color: #ddd;
+  padding: 10px 0;
+  font-size: 30rpx;
+}
+.chooseCansel view{
+  width: 50%;
+  text-align: right;
+  padding-right: 20px;
+}
+.chooseCansel view:last-child{
+  text-align: left;
+  padding-left: 20px;
+}
+.bookShelfs {
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.book {
+  position: relative;
+  text-align: center;
+  width: 40%;
+  padding: 30rpx;
+}
+.book checkbox{
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+.book view{
+  border-bottom: 4px solid #fff;
+  box-shadow: 0 3px 3px 1px #ccc;
+}
+.book image{
+  width: 80%;
+  height: 140px;
+}
+.addBook{
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.addBook image{
+  width: 200rpx;
+}
+

@@ -1,0 +1,52 @@
+#search_history{
+  margin: 20px 0;
+  padding: 0 20px;
+  overflow: auto;
+}
+#search_history view:nth-child(1){
+  float: left;
+  font-weight: 700;
+}
+#search_history view:nth-child(2){
+  float: right;
+  color: red;
+  font-size: 30rpx;
+}
+#search_content view{
+  float: left;
+  height: 36rppx;
+  line-height: 36rpx;
+  margin-left: 10px;
+  border-radius: 36rpx;
+  font-size: 30rpx;
+  background-color: #eee;
+  padding: 6px 10px;
+}
+.inputtext{
+  height: 60rpx;
+  background-color: #fff;
+  line-height: 60rpx;
+  text-align: center;
+  padding: 10px 20px;
+}
+.inputtext input{
+  width: 80%;
+  float: left;
+  text-align: left;
+  background-color: #eee;
+  padding: 4px;
+  font-size: 30rpx;
+  border-radius: 4px;
+}
+.inputtext view{
+  float: right;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size:30rpx;
+  width: 10%;
+}
+
+.searchList{
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}

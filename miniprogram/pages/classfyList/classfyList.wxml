@@ -1,0 +1,17 @@
+<view class="classfyList">
+  <view class="classfyListContent" wx:for="{{bookItem}}" wx:key="index">
+    <!-- 图片 -->
+    <view class="classfyList_image">
+      <image mode="widthFix" src="{{item.label_list_img}}"></image>
+    </view>
+    <!-- 介绍 -->
+    <view class="classfyList_text">
+      <view class="book_list_text_title">
+        <view>{{item.lable_list_name}}</view>
+       <view wx:if="{{item.has_add==0}}" bindtap="addShelf" data-id="{{item.id}}" data-img="{{item.label_list_img}}" data-bookname="{{item.lable_list_name}}">加书架</view>
+        <view wx:if="{{item.has_add==1}}">也添加</view>
+      </view>
+      <view class="classfyList_text_con" bindtap="gotoRead" data-bookid="{{item.book_id}}">{{item.lable_list}}</view>
+    </view>
+  </view>
+</view>

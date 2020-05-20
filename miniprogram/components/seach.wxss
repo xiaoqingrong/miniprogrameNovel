@@ -1,0 +1,15 @@
+/* components/seach.wxss */
+.inputtext{
+  height: 60rpx;
+  background-color: #fff;
+  line-height: 60rpx;
+  text-align: center;
+  padding: 10px 20px;
+}
+.inputtext input{
+  text-align: left;
+  background-color: #eee;
+  padding: 4px;
+  font-size: 30rpx;
+  border-radius: 4px;
+}

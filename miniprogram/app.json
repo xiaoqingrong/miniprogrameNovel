@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/searchList/searchList",
+    "pages/search/search",
+    
+    "pages/classfyList/classfyList",
+    "pages/read/read",
+    "pages/my/my",
+    "pages/classfy/classfy",
+    "pages/login/login",
+    "pages/about/about"
+    
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小说",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "书架",
+        "iconPath": "images/book1.png",
+        "selectedIconPath": "images/book.png"
+      },
+      {
+        "pagePath": "pages/classfy/classfy",
+        "text": "分类",
+        "iconPath": "images/classfy1.png",
+        "selectedIconPath": "images/classfy.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my1.png",
+        "selectedIconPath": "images/my.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

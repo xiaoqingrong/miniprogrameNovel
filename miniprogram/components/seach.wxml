@@ -1,0 +1,4 @@
+<!--components/seach.wxml-->
+<view id="search" class="inputtext">
+  <input bindfocus="gotoSearch" placeholder="书名/作者/关键字"></input>
+</view>
