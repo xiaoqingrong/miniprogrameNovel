@@ -9,7 +9,7 @@
   </view>
   <view id="color_change" wx:if="{{color_show == true}}" style="top: {{ positionTop+'px'}}">
     <view class="items">
-      <view bindtap="showChapter">目录</view><view>上一章</view><view>下一章</view>
+      <view bindtap="showChapter">目录</view><view bindtap="preChapter">上一章</view><view bindtap="nextChapter">下一章</view>
     </view>
     <view class="color_content" wx:for="{{background}}" bindtap="colorChange" data-color="{{item}}"></view>
   </view>

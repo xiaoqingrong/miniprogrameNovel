@@ -38,11 +38,13 @@ Page({
     }
     
   },
+  // 显示章节
   showChapter(){
     this.setData({
       chapterIsshow:true
     })
   },
+  // 选择章节
   chooseChapter(e){
     this.setData({
       currentChapter:e.currentTarget.dataset.chapterid,
@@ -50,12 +52,31 @@ Page({
     })
     this.getWord();
   },
+  // 上一章
+  preChapter:function(){
+    if(this.data.currentChapter > 1){
+      this.setData({
+        currentChapter:this.data.currentChapter-1
+      })
+      this.getWord();
+    }
+  },
+  // 下一章
+  nextChapter:function(){
+    if(this.data.currentChapter < this.data.directory.length){
+      this.setData({
+        currentChapter:this.data.currentChapter+1
+      })
+      this.getWord();
+    }
+  },
+  // 展示文字
   getWord:function(){
     var strArr = []; 
     var n = this.data.wordNum;     
     let _this = this;
     wx.request({
-      url: 'http://localhost:3000/chapter',
+      url: 'http://www.jecksonli.com:3000/chapter',
       data:{
         bookid:this.data.bookId,
         chaptebookid:this.data.currentChapter
@@ -67,10 +88,11 @@ Page({
       }
     })
   },
+  // 获取目录
   getDirectory:function(i){
     let _this = this;
     wx.request({
-      url: 'http://localhost:3000/haodema',
+      url: 'http://www.jecksonli.com:3000/haodema',
       data:{
         bookid:i
       },
@@ -81,6 +103,7 @@ Page({
       }
     })
   },
+  // 显示切换颜色view
   multipleTap: function(e){
     let curTime = e.timeStamp;
     let lastTime = this.lastTapDiffTime;
@@ -94,6 +117,7 @@ Page({
       })
     }
   },
+  // 切换颜色
   colorChange:function(e){
     if(e.target.dataset.color === '#000000'){
       this.setData({
@@ -128,22 +152,4 @@ Page({
       indicatorDots: !this.data.indicatorDots
     })
   },
-
-  changeAutoplay() {
-    this.setData({
-      autoplay: !this.data.autoplay
-    })
-  },
-
-  intervalChange(e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-
-  durationChange(e) {
-    this.setData({
-      duration: e.detail.value
-    })
-  }
 })
